@@ -52,13 +52,9 @@ fun NewsListScreen(
     SwipeRefresh(state = swipeRefreshState, onRefresh = { viewModel.refreshFeedNews(uri) }) {
         when (initialPageNews) {
             is State.Loading -> LoadingNewsListScreen(modifier)
-            is State.Success -> {
+            is State.Success, is State.Error  -> {
                 LazyColumnScreen(feedNews, navController, viewModel, uri, modifier)
-            }
-            is State.Error -> {
-                val error = (feedNews as State.Error).exception
-                Text(text = error.localizedMessage ?: "error")
-            }
+            }//O estado de erro precisaria ser refeito com calma, não sobrou tempo para refatorar a ViewModel + o estado de erro
         }
     }
 }
