@@ -72,4 +72,8 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
     implementation(libs.io.insert.koin.koin.android)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.accompanist.swiperefresh)
+    implementation(libs.coil.compose)
+    implementation(libs.koin.compose.viewmodel.navigation)
 }
