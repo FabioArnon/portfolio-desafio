@@ -76,4 +76,5 @@ dependencies {
     implementation(libs.accompanist.swiperefresh)
     implementation(libs.coil.compose)
     implementation(libs.koin.compose.viewmodel.navigation)
+    implementation(libs.coil.network.okhttp)
 }
